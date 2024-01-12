@@ -1,0 +1,619 @@
+<!doctype html>
+<html ⚡4email data-css-strict>
+   <head>
+      <meta charset="utf-8">
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+      <style amp4email-boilerplate>body{visibility:hidden}</style>
+      <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+      <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+      <style amp-custom>
+         p{
+            margin: 0;
+         }
+         
+         .container-carousel-full-screen .amp-carousel-button-prev,
+         .container-carousel-full-screen .amp-carousel-button-next{
+            border: 1px solid #000000;
+            top: 20px;
+            border-radius: 0;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+         }
+         
+         .container-carousel-full-screen .amp-carousel-button-prev {
+            left: 0px;
+         }
+         
+         .container-carousel-full-screen .amp-carousel-button-next {
+            right: 0px;
+         }
+         
+         .body-bg{
+            background-color: #f5f5fb;
+         }
+         
+         .bg{
+            background-color: #ffffff;
+         }
+         
+         .mx-600{
+            max-width: 600px;
+         }
+         
+         .mx-420{
+            max-width: 420px;
+         }
+         
+         .mx-365{
+            max-width: 365px;
+         }
+         
+         .mx-260{
+            max-width: 260px;
+         }
+         
+         .centering{
+            margin: 0 auto;
+         }
+         
+         .text-center{
+            text-align: center; 
+         }
+            
+         .py-20{
+            padding-top: 20px;
+            padding-bottom: 20px;
+         }
+         
+         .pb-20{
+            padding-bottom: 20px;
+         }
+         
+         .py-30{
+            padding-top: 30px;
+            padding-bottom: 30px;
+         }
+         
+         .pt-30{
+            padding-top: 30px;
+         }
+         
+         .px-15{
+            padding-left: 15px;
+            padding-right: 15px;
+         }
+         
+         .px-27{
+            padding-left: 27px;
+            padding-right: 27px;
+         }
+         
+         .pt-15{
+            padding-top: 15px;
+         }
+         
+         .pb-12{
+            padding-bottom: 12px;
+         }
+         
+         .pb-25{
+            padding-bottom: 25px;
+         }
+         
+         .pt-50{
+            padding-top: 50px;
+         }
+         
+         .pb-40{
+            padding-bottom: 40px;
+         }
+         
+         .mt-12{
+            margin-top: 12px;
+         }
+         
+         .emailbody {
+            padding: 10px;
+         }
+         
+         .container-carousel-list{
+            max-width: 520px;
+            margin: 0 auto;
+         }
+         
+         .p-10{
+            padding: 10px 0 10px 0;
+         }
+         
+         .text-large{
+            font-family: 'Helvetica',sans-serif;
+            font-size: 38px;
+            line-height: 47px;
+            color: #000000;
+            font-style: normal;
+            font-weight: bold;
+         }
+         
+         .text-medium-22{
+            font-family: 'Arial',sans-serif;
+            font-size: 22px;
+            line-height: 25px;
+            color: #000000;
+            font-style: normal;
+            font-weight: bold;
+            text-transform: uppercase;
+            white-space: normal;
+         }
+         
+         .text-medium-20{
+            font-family: 'Helvetica',sans-serif;
+            font-size: 20px;
+            line-height: 25px;
+            color: #131314;
+            font-style: normal;
+            font-weight: bold;
+            white-space: normal;
+         }
+            
+         .text-small-14{
+            font-family: 'Helvetica',sans-serif;
+            font-size: 14px;
+            line-height: 19px;
+            color: #000000;
+            font-style: normal;
+            font-weight: normal;
+         } 
+            
+         .text-small-12{
+            font-family: 'Arial',sans-serif;
+            font-size: 12px;
+            line-height: 16px;
+            color: #131314;
+            font-style: normal;
+            font-weight: normal;
+            white-space: normal;
+         }
+            
+         .blue-line{
+            height: 2px;
+            width: 100%;
+            background-color: #5B25FB;
+            display: block;
+         }
+         
+         .pink-line{
+            height: 100%;
+            width: 12px;
+            border-radius: 4px;
+            background-color: #d531cc;
+            position: absolute;
+            top: 0;
+            left: 0;
+         }
+         
+         .btn{
+            display: flex;
+            width: 220px;
+            height: 42px;
+            background-color: #5b25fb; 
+            border-radius: 4px;
+            text-decoration: none;
+         }
+         
+         .btn-text{
+            color: #ffffff;
+            font-family: 'Helvetica',sans-serif;
+            font-size: 16px;
+            line-height: 20px;
+            font-style: normal;
+            font-weight: bold;
+            line-height: normal;
+            margin: auto;
+         }
+            
+         .top{
+            vertical-align: top;
+         }
+         
+         .container-carousel-list .amp-carousel-button-next {
+            right: 0;
+         }
+         
+         .container-carousel-list .amp-carousel-button-prev {
+            left: 0;
+         }
+         
+         .container-carousel-list .amp-carousel-button {
+            top: 35px;
+            width: 50px;
+            height: 50px;
+            background-size: 20px 20px;
+         }
+         
+         .relative{
+            position: relative;
+            border-radius: 4px 0 0 4px;
+         }
+         
+         .scale{ 
+            transition: transform .4s ease-in-out;
+            box-shadow: 0px 3px 10px rgba(0, 0, 255, 0.5);
+         }
+         
+         .scale:hover {
+            transform: scale(1.1);
+         }
+         
+         .flex-center{
+            display: flex;
+            justify-content: center;
+         }
+         
+         .container{
+            max-width: 450px;
+            margin: 0 auto;
+         }
+         
+         .py-20{
+            padding-top: 20px;
+            padding-bottom: 20px;
+         }
+            
+         .accordion-item{
+            background: #FFF;
+            border-radius: 4px;
+            padding: 10px 15px 15px 15px;
+            color: #5b25fb;
+            font-family: Arial, sans-serif;
+         }
+         
+         .item-content{
+            padding: 10px;
+         }
+         
+         .text{
+            font-family: Arial, sans-serif;
+            color: #000000;
+            font-size: 14px;
+            line-height: 21px;
+         }
+         
+         .button {
+            display: inline-block;
+            border-radius: 4px;
+            height: 42px;
+            width: 220px;
+            margin: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 40px;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            background-color: #5b25fb;
+            font-family: 'Helvetica',sans-serif;
+            font-style: normal;
+            font-weight: bold;
+         }
+         
+         .button .highlight {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease-in-out;
+            transform: translateX(-100%);
+         }  
+         
+         .button:hover .highlight {
+            transform: translateX(0%);
+         }
+         
+         .btn.rotate{
+            transition: transform .7s ease-in-out;
+         }
+         
+         .btn.rotate:hover{
+            transform: rotate(360deg);
+         }
+         
+         @media screen and (max-width: 500px) {
+            .text-medium-22{ 
+               font-size: 17px;
+               line-height: 20px;
+            }
+            
+            .container-carousel-full-screen amp-carousel{ 
+               height: 350px;
+            }
+         }
+         @media screen and (max-width: 400px){
+            .container-carousel-list{
+               max-width: 400px;
+            }
+            
+            .w-400{
+               max-width: 400px;
+               width: 100%;
+               height: auto;
+            }
+            
+            .w-100{
+               width: 100%;
+            }
+         }
+      </style>
+   </head>
+   <body class="body-bg">
+      <div class="px-15">
+         <div class="mx-600 centering py-20">
+            <a href="https://ua.sendios.io/" target="_blank">
+               <amp-img src="images/white-logo.png" width="110" height="40" alt="Sendios" title="Sendios"></amp-img>
+            </a>
+         </div>
+         <div class="bg mx-600 centering">
+            <div class="pt-30 px-15">
+               <p class="text-large pb-20">Thank you for subscribing!</p>
+               <span class="blue-line"></span>
+               <div class="py-20">
+                  <span class="text-small-14">Let's start sharing some cool content right now. Here's today's dose of useful information: </span>
+               </div>
+            </div>
+            <div class="px-15">
+               <div class="container-carousel-list pb-40">
+                  <amp-carousel height="470" layout="fixed-height" type="carousel" role="region" aria-label="Basic usage carousel" controls loop>
+                     <div class="p-10 top w-100">
+                        <table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; border: 0;">
+                           <tr>
+                              <td style="padding: 0 0 10px 0; margin: 0;" align="center" valign="top">
+                                 <a href="https://ua.sendios.io/sendios_glossary" target="_blank">
+                                    <amp-img src="images/article.png" width="255" height="193" alt="Sendios glossary" title="Sendios glossary" layout="intrinsic" class="w-400"></amp-img>
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 0 0 10px 0; margin: 0; max-width: 255px;" align="left" valign="top">
+                                 <span class="text-medium-20">Sendios glossary</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 0 0 15px 0; margin: 0; max-width: 255px;" align="left" valign="top">
+                                 <span class="text-small-12">Sendios Glossary is your guide into the marketing industry. We created it for you! Whether you are a beginner who is starting his journey here or an expert with 10-year experience. It is a good idea to keep an eye on new terminology that appears in marketing.</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 0 0 10px 0; margin: 0;" align="left" valign="top">
+                                 <a class="btn" href="https://ua.sendios.io/sendios_glossary" target="_blank">
+                                 <span class="btn-text">Read</span>
+                                 </a>
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="p-10 top w-100">
+                        <table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; border: 0;">
+                           <tr>
+                              <td style="padding: 0 0 10px 0; margin: 0;" align="center" valign="top">
+                                 <a href="https://sendios.io/email_marketing_gamification_five_benefits" target="_blank">
+                                    <amp-img src="images/blog-img-1.png" width="255" height="193" alt="Email marketing gamification: 5 benefits" title="Email marketing gamification: 5 benefits" layout="intrinsic" class="w-400"></amp-img>
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 0 0 10px 0; margin: 0; max-width: 255px;" align="left" valign="top">
+                                 <span class="text-medium-20">Email marketing gamification: 5 benefits</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 0 0 15px 0; margin: 0; max-width: 255px;" align="left" valign="top">
+                                 <span class="text-small-12">We have a great solution that will bring more fun into your email marketing strategy. Read the article to find out how to improve the key product metrics with Sendios.</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 0 0 10px 0; margin: 0;" align="left" valign="top">
+                                 <a class="btn" href="https://sendios.io/email_marketing_gamification_five_benefits" target="_blank">
+                                 <span class="btn-text">Read</span>
+                                 </a>
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="p-10 top  w-100">
+                        <table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; border: 0;">
+                           <tr>
+                              <td style="padding: 0 0 10px 0; margin: 0;" align="center" valign="top">
+                                 <a href="https://sendios.io/6_email_marketing_rules" target="_blank">
+                                    <amp-img src="images/blog-img-2.jpg" width="255" height="193" alt="6 email marketing rules" title="6 email marketing rules" layout="intrinsic" class="w-400"></amp-img>
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 0 0 10px 0; margin: 0; max-width: 255px;" align="left" valign="top">
+                                 <span class="text-medium-20">6 email marketing rules</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 0 0 15px 0; margin: 0; max-width: 255px;" align="left" valign="top">
+                                 <span class="text-small-12">Email marketing is a major customer retention tool and, if used correctly, boosts sales of products and services. Companies see growth opportunities and implement email as part of their business strategy. Would you like to deliver professional campaigns and build lasting customer relationships through email marketing?</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 0 0 10px 0; margin: 0;" align="left" valign="top">
+                                 <a class="btn" href="https://sendios.io/6_email_marketing_rules" target="_blank">
+                                 <span class="btn-text">Read</span>
+                                 </a>
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="p-10  w-100">
+                        <table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; border: 0;">
+                           <tr>
+                              <td style="padding: 0 0 10px 0; margin: 0;" align="center" valign="top">
+                                 <a href="https://sendios.io/transactional_emails_you_can_adapt_now" target="_blank">
+                                    <amp-img src="images/slide-5.png" width="255" height="193" alt="Transactional emails you can adapt now" title="Transactional emails you can adapt now" layout="intrinsic" class="w-400"></amp-img>
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 0 0 10px 0; margin: 0; max-width: 255px;" align="left" valign="top">
+                                 <span class="text-medium-20">Transactional emails you can adapt now</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 0 0 15px 0; margin: 0; max-width: 255px;" align="left" valign="top">
+                                 <span class="text-small-12">Email marketing is a strategy for the acquisition of new clients and increasing retention. When it comes to emails, there are two kinds we send transactional and marketing emails. What’s the difference between marketing emails and transactional emails? We’ve discussed it here. Feel free to read it!</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 0 0 10px 0; margin: 0;" align="left" valign="top">
+                                 <a class="btn" href="https://sendios.io/transactional_emails_you_can_adapt_now" target="_blank">
+                                 <span class="btn-text">Read</span>
+                                 </a>
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </amp-carousel>
+               </div>
+               <p class="text mx-420 centering text-center px-15">You should check out other interesting articles on our blog!</p>
+               <div class="flex-center py-30"> 
+                  <a href="https://sendios.io/email_marketing_blog" class="button">See all<span class="highlight"></span></a>
+               </div>
+            </div>
+            <div class="container-carousel-full-screen mx-420 centering">
+               <amp-carousel height="400" width="420" layout="responsive" type="slides" role="region" aria-label="Carousel with arbitrary HTML content" controls loop>
+                  <div>
+                     <amp-img src="images/emoji.png" layout="responsive" width="420" height="189" alt="The evolution of emoji" title="The evolution of emoji"></amp-img>
+                     <p class="pt-15 pb-12 text-medium-22 text-center px-15">The evolution of emoji</p>
+                     <p class="text-small-12 pb-25 text-center px-15">Emoji is the fundamental tool for expressing emotions on social media platforms. Nowadays, it has started a new stage of its life cycle, and email marketing specialists use it as an instrument of grabbing customers' attention. Emoticons increase the open rate up to 70%, but at that same time, only 6.9% of subject lines include them. Why don't companies use such a powerful tool?</p>
+                  </div>
+                  <div>
+                     <amp-img src="images/email-marketing-plat.png" layout="responsive" width="420" height="189" alt="Review of Top 5 Email Marketing Platforms" title="Review of Top 5 Email Marketing Platforms"></amp-img>
+                     <p class="text-medium-22 pt-15 pb-12 text-center px-15">Review of Top 5 Email Marketing Platforms</p>
+                     <p class="text-small-12 pb-25 text-center px-15">This guide will give you a detailed overview of email marketing platforms. You can take your email marketing to the next level with the professional tools of each service.</p>
+                  </div>
+                  <div>
+                     <amp-img src="images/spam-words.png"  layout="responsive" width="420" height="189" alt="99 spam words that crush KPIs" title="99 spam words that crush KPIs"></amp-img>
+                     <p class="text-medium-22 pt-15 pb-12 text-center px-15">99 spam words that crush KPIs</p>
+                     <p class="text-small-12 pb-25 text-center px-15">Email marketing adapts to marketing trends, brings results, and gives profits. But it also has some cons, such as SPAM filters that put your emails in Pandora’s box, and users don’t even know about their existence. Today we discuss the words email providers find in your letters and redirect them to the SPAM folder.</p>
+                  </div>
+               </amp-carousel>
+            </div>
+            <div class="flex-center py-30"> 
+               <a href="https://sendios.io/email_marketing_blog" class="btn rotate">
+               <span class="btn-text">Find out</span>
+               </a>
+            </div>
+            <div class="container py-20 px-15">
+               <amp-accordion class="sample" animate expand-single-section>
+                  <section expanded>
+                     <h3 class="accordion-item" style="position: relative; padding-right: 25px;">Best email marketing summer practices <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">&#8681;</span>
+                     </h3>
+                     <div class="item-content">
+                        <p class="text">
+                           Summer madness is almost over! It means that we are back from our dreamy vacations, and ready to check what email campaigns marketers sent in the last couple of months.
+                        </p>
+                        <p class="text">
+                           With email marketing, there are ways to provide customers with a more relaxed approach and maintain regular contact without annoying them. How? Adjust your email marketing campaigns to the mood we all pursue during summer – happy and easygoing.
+                        </p>
+                     </div>
+                  </section>
+                  <section>
+                     <h3 class="accordion-item" style="position: relative; padding-right: 25px;">12 ways to build an email list <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">&#8681;</span></h3>
+                     <div class="item-content">
+                        <p class="text">
+                           The first step to a successful email marketing campaign is to create a mailing list of people who are actually interested in your service or product. Some marketers prefer to buy ready-to-use databases. But you cannot be sure about the quality of these addresses. By quality, we mean:
+                        </p>
+                        <ul>
+                           <li class="text">Are those email addresses still active?</li>
+                           <li class="text">Are those contacts interested in your service?</li>
+                           <li class="text">Have they granted you a permission?</li>
+                        </ul>
+                        <p class="text">  
+                           And permission here is the most crucial part here. Email marketing is regulated by CAN-SPAM Act or GDPR that allows marketers to send emails only to those users who agreed to receive newsletters by email.
+                        </p>
+                        <p class="text">
+                           Today, we will learn about effective methods to build a mailing list and get permission from users to communicate with them via email.
+                        </p>
+                     </div>
+                  </section>
+                  <section>
+                     <h3 class="accordion-item" style="position: relative; padding-right: 25px;">Why email marketing is must-have? <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">&#8681;</span></h3>
+                     <div class="item-content">
+                        <p class="text">
+                           Email campaigns provide value for those who do it right! Well-written email campaigns engage users with your brand and keep them coming back to you! Investing in email marketing is less expensive than traditional techniques like print and TV. What’s even more important? YOUR USERS LOVE EMAILS. 72% of consumers prefer to get promotional messages through email, according to the study conducted by Marketing Sherpa.
+                        </p>
+                        <p class="text">
+                           Regarding marketing, email marketing is your reliable friend who reaches a wider and already interested audience. As a result, you catch qualified leads. Emails also work well if you aim for sustainable growth over time. These and other points we are going to discuss today.
+                        </p>
+                        <p class="text">
+                           Let’s find out what benefits you get from a good email marketing strategy.
+                        </p>
+                     </div>
+                  </section>
+                  <section>
+                     <h3 class="accordion-item" style="position: relative; padding-right: 25px;">How to craft transactional emails <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">&#8681;</span></h3>
+                     <div class="item-content">
+                        <p class="text">
+                           An email is a powerful medium to communicate with your target audience. With its help, you build and maintain a connection with millions of customers at the same time. We discussed two types of emails in the previous article. So, feel free to read it and learn what they are and what differs them. In today’s blog post, we talk more about transactional emails and how to make them deliver results.
+                        </p>
+                        <p class="text">
+                           Let’s start with five tiny but valuable facts about transactional emails.
+                        </p>
+                        <ul>
+                           <li class="text">It is a one-to-one communication between the brand and the recipient</li>
+                           <li class="text">It is triggered by a specific action (or lack of action)</li>
+                           <li class="text">Transactional emails have 8x higher OR and CTR than marketing bulk emails</li>
+                           <li class="text">You can automate the process with the help of email marketing platforms like Sendios</li>
+                           <li class="text">Your recipients expect you to send transactional emails</li>
+                        </ul>
+                        <p class="text">  
+                           Moreover, you can easily adapt transactional emails to any business. For instance, order confirmations for online shops, password recovery for social media platforms, and comment notifications for project management tools. So, here you’ll find the key elements of any transactional email.
+                        </p>
+                     </div>
+                  </section>
+                  <section>
+                     <h3 class="accordion-item" style="position: relative; padding-right: 25px;">7 elements of a better welcome email <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">&#8681;</span></h3>
+                     <div class="item-content">
+                        <p class="text">
+                           What first impression does your company make on the subscriber? To find the answer, you will have to check the first message you send—a welcome email. If your goal is to build a strong connection with your customers, this message is the fundamental step of your email marketing efforts.
+                        </p>
+                        <p class="text">
+                           What is a welcome letter?
+                        </p>
+                        <p class="text">
+                           A welcome letter is the first interaction with your subscribers after they join your email list. Welcome messages are a friendly note that aims to establish contact. It can contain videos, special offers, or your company’s values. But if you strive to improve your engagement rates, the welcome email is a must!
+                        </p>
+                        <p class="text">
+                           A well-prepared first message introduces your brand. In this article, we present seven elements your welcome email should include.
+                        </p>
+                     </div>
+                  </section>
+               </amp-accordion>
+            </div>
+            <p class="text mx-420 centering text-center px-15">On our Sendios blog, we regularly share valuable insights into email marketing and the latest industry trends you don't want to miss!</p>
+            <div class="flex-center py-30"> 
+               <a href="https://sendios.io/email_marketing_blog" class="btn scale">
+               <span class="btn-text">Go to the blog</span>
+               </a>
+            </div>
+         </div>
+      </div>
+      <div class="bg mx-600 centering mt-12 relative">
+         <span class="pink-line"></span>
+         <div class="mx-420 centering px-27 py-30">
+            <p class="text-medium-20 mx-260">We will never get tired of constantly improving your product.</p>
+            <p class="text-small-14 pt-15" style="color: #131314;">Many more exciting things lie ahead!</p>
+         </div>
+      </div>
+      <div class="mx-600 pt-50 pb-40 centering px-15">
+         <span class="text-small-12 text-center" style="color: #828282;"> Please click <a style="color: #333333; text-decoration: underline;" href="https://ua.sendios.io/" target="_blank">here</a> if you no longer want to receive our valuable articles on email marketing 😢 
+         </span>
+      </div>
+   </body>
+</html>
